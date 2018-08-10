@@ -1,0 +1,31 @@
+/**
+ *****************************************
+ * Created by lifx
+ * Created on 2018-08-10 10:55:12
+ *****************************************
+ */
+@charset "utf-8";
+
+
+/**
+ *****************************************
+ * boolean转化
+ *****************************************
+ */
+@function boolean($value) {
+    @return if($value == '', false, if($value == 0, false, $value));
+}
+
+
+/**
+ *************************************
+ * 屏幕密度深度
+ *************************************
+ */
+@mixin ratio($size: 2) {
+    @media only screen and (-webkit-min-device-pixel-ratio: #{$size}),
+    only screen and (min-device-pixel-ratio: #{$size}) {
+        @content;
+    }
+}
+

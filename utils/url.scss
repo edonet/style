@@ -1,0 +1,61 @@
+/**
+ *****************************************
+ * Created by lifx
+ * Created on 2018-08-10 10:57:20
+ *****************************************
+ */
+@charset "utf-8";
+
+
+/**
+ *****************************************
+ * 生成连接
+ *****************************************
+ */
+@function url-encode($url, $args: null) {
+
+    // 重载参数
+    @if type-of($url) == 'map' {
+        @return url-encode('', $url);
+    }
+
+    // 生成查询字符参数
+    $args: if(boolean($args), str-join($args), '');
+
+    // 处理【url】
+    @if $url {
+
+        // 查找参数
+        $index: str-index($url, '?');
+
+        // 合并查询字符参数
+        @if $index {
+            $query: str-slice($url, $index + 1);
+            $url: str-slice($url, 0, $index - 1);
+
+            // 合并参数
+            @if $query {
+                $args: if(boolean($args), $query + '&' + $args, $query);
+            }
+        }
+    }
+
+    // 编码参数
+    @if $args {
+        $args: str-encode($args);
+        $url: if(boolean($url), $url + '?' + $args, $args);
+    }
+
+    // 返回结果
+    @return $url;
+}
+
+
+/**
+ *****************************************
+ * 生成路径
+ *****************************************
+ */
+@function uri($url, $args: null) {
+    @return url(url-encode($url, $args));
+}

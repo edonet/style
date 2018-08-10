@@ -1,0 +1,69 @@
+/**
+ *****************************************
+ * Created by lifx
+ * Created on 2018-08-10 13:54:51
+ *****************************************
+ */
+@charset "utf-8";
+
+
+/**
+ *****************************************
+ * 加载模块
+ *****************************************
+ */
+@import "./style.json?default";
+@import "./utils/base.scss";
+@import "./utils/str.scss";
+@import "./utils/url.scss";
+
+
+/**
+ *************************************
+ * 转换长度单元为【rem】
+ *************************************
+ */
+@function rem($size, $base: $fontSize) {
+    $len: length($size);
+
+    @if $len == 0 {
+        @return 1rem;
+    }
+
+    @if $len == 1 {
+        $unit: unit($size);
+
+        @if $unit == 'px' {
+            @return $size / $base * 1rem;
+        }
+
+        @if $unit == '' {
+            @return ($size * 1px) / $base * 1rem;
+        }
+
+        @return $size;
+    }
+
+    $res: rem(nth($size, 1), $base);
+
+    @for $idx from 2 through $len {
+        $res: append($res, rem(nth($size, $idx), $base));
+    }
+
+    @return $res;
+}
+
+
+/**
+ *****************************************
+ * 绘制圆圈
+ *****************************************
+ */
+@mixin circle($size: 10px) {
+    display: inline-block;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    vertical-align: middle;
+    overflow: hidden;
+}

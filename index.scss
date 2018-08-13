@@ -12,6 +12,7 @@
  * 加载模块
  *****************************************
  */
+@import "./settings.scss";
 @import "./lib/reset.scss";
 @import "./lib/common.scss";
 
@@ -27,7 +28,7 @@ html, body {
     color: $fontColor;
     font-size: $fontSize;
     line-height: 1.5em;
-    background-color: white;
+    background-color: $backgroundColor;
 
     // 字体配置
     font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;

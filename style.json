@@ -11,8 +11,8 @@
     "darkColor": "#222428",
 
     "fontSize": "15px",
-    "fontColor": "$darkColor",
+    "fontColor": "#222428",
     "borderColor": "#ddd",
-    "backgroundColor": "$lightColor",
+    "backgroundColor": "#f4f5f8",
     "placeholderColor": "#aaa"
 }

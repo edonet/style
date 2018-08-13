@@ -12,10 +12,9 @@
  * 加载模块
  *****************************************
  */
+@import "./lib/utils.scss";
+@import "~@arted/stand-loader?name=APP_STYLE";
 @import "./style.json?default";
-@import "./utils/base.scss";
-@import "./utils/str.scss";
-@import "./utils/url.scss";
 
 
 /**

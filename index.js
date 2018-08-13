@@ -14,6 +14,7 @@
  */
 import './index.scss?global';
 import style from './style.json';
+import * as stand from '@arted/stand-loader?name=APP_STYLE';
 
 
 /**
@@ -21,4 +22,16 @@ import style from './style.json';
  * 抛出对象
  *****************************************
  */
-export default { ...style };
+export default { ...style, ...stand };
+
+
+/**
+ *****************************************
+ * 热更新
+ *****************************************
+ */
+if (module.hot) {
+    module.hot.accept((err) => {
+        console.error(err);
+    });
+}

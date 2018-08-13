@@ -31,7 +31,5 @@ export default { ...style, ...stand };
  *****************************************
  */
 if (module.hot) {
-    module.hot.accept((err) => {
-        console.error(err);
-    });
+    module.hot.accept(err => console.error(err));
 }

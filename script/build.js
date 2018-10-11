@@ -15,6 +15,7 @@
 const
     path = require('path'),
     merge = require('../lib/merge'),
+    update = require('../lib/update'),
     sassify = require('../lib/sassify'),
     lessify = require('../lib/lessify'),
     copy = require('../lib/copy'),
@@ -40,13 +41,16 @@ async function run() {
         );
 
     // 生成配置文件
-    sassify(dir('../scss/config.scss'), style.settings);
-    lessify(dir('../less/config.less'), style.settings);
-    copy(dir('../public/bd.svgx'), dir('../public/bd.svg'), style.settings);
+    if (await update(dir('./data.tmp'), JSON.stringify(style))) {
+        await sassify(dir('../scss/config.scss'), style.settings);
+        await lessify(dir('../less/config.less'), style.settings);
+        await copy(dir('../public/bd.svgx'), dir('../public/bd.svg'), style.settings);
+    }
 
     // 返回结果
     return style;
 }
+
 
 
 /**

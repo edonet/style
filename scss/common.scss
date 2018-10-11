@@ -199,7 +199,7 @@ $paddingList: 5 10 15 20 25 30 35 40;
 @include ratio {
     %bd2 {
         border: 0 solid $borderColor;
-        border-image: uri('~@arted/style/lib/bd.svg', ( stroke: $borderColor )) 2 2 stretch;
+        border-image: url('./public/bd.svg') 2 2 stretch;
     }
 
     .bdlt, .bdh, .bd { @extend %bd2; border-left-width: 1px; }

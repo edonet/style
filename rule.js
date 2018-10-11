@@ -1,7 +1,7 @@
 /**
  *****************************************
  * Created by lifx
- * Created on 2018-08-10 13:53:48
+ * Created on 2018-10-11 13:45:15
  *****************************************
  */
 'use strict';
@@ -12,23 +12,15 @@
  * 加载依赖
  *****************************************
  */
-import './public/reset.css';
-import settings from './settings.json';
+const path = require('path');
 
 
 /**
  *****************************************
- * 抛出对象
+ * 设置加载规则
  *****************************************
  */
-export default settings;
-
-
-/**
- *****************************************
- * 热更新
- *****************************************
- */
-if (module.hot) {
-    module.hot.accept(err => console.error(err));
-}
+module.exports = {
+    test: path.resolve(__dirname, './settings.json'),
+    loader: path.resolve(__dirname, './script/loader.js')
+};

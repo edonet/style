@@ -12,8 +12,8 @@
  * 加载模块
  *****************************************
  */
-@import "./settings.scss";
-@import "./scss/common.scss";
+@import "./settings.less";
+@import "./less/common.less";
 
 
 /**
@@ -24,10 +24,10 @@
 html, body {
 
     // 字体大小、颜色
-    color: $fontColor;
-    font-size: $fontSize;
+    color: @fontColor;
+    font-size: @fontSize;
     line-height: 1.5em;
-    background-color: $backgroundColor;
+    background-color: @backgroundColor;
 
     // 字体配置
     font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
@@ -74,5 +74,5 @@ html, body {
  */
 text::placeholder,
 input::placeholder {
-    color: $placeholderColor;
+    color: @placeholderColor;
 }

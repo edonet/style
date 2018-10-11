@@ -74,7 +74,7 @@
  * 编码字符串
  *****************************************
  */
-@function str-encode($string) {
+@function escape($string) {
 
     // 替换特殊字符
     $string: str-replace($string, '%', '%25');
@@ -120,20 +120,10 @@
 
     // 编码参数
     @if $args {
-        $args: str-encode($args);
+        $args: escape($args);
         $url: if(boolean($url), $url + '?' + $args, $args);
     }
 
     // 返回结果
     @return $url;
-}
-
-
-/**
- *****************************************
- * 生成路径
- *****************************************
- */
-@function uri($url, $args: null) {
-    @return url(url-encode($url, $args));
 }

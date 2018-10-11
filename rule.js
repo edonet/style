@@ -22,5 +22,5 @@ const path = require('path');
  */
 module.exports = {
     test: path.resolve(__dirname, './settings.json'),
-    loader: path.resolve(__dirname, './script/loader.js')
+    loader: path.resolve(__dirname, './lib/loader.js')
 };

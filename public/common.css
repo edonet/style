@@ -142,6 +142,7 @@
  */
 .hd { visibility: hidden; }
 .ovhd { overflow: hidden; }
+.opacity { opacity: 0; }
 .hide { display: none; }
 
 

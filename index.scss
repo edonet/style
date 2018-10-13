@@ -83,6 +83,10 @@ input, textarea {
     border: 1px solid $borderColor;
     resize: none;
 
+    &:focus {
+        outline: 0;
+    }
+
     &::placeholder {
         color: $placeholderColor;
     }

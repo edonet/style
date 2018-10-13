@@ -81,7 +81,12 @@ input, textarea {
     color: inherit;
     background: transparent;
     border: 1px solid @borderColor;
+    outline: 0;
     resize: none;
+
+    &:focus {
+        outline: 0;
+    }
 
     &::placeholder {
         color: @placeholderColor;

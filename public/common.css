@@ -39,7 +39,6 @@
 
 /* relative 布局 */
 .rel {
-    display: block;
     position: relative;
 }
 
@@ -91,6 +90,15 @@
 
 
 /**
+ *****************************************
+ * 元素类型
+ *****************************************
+ */
+.blk { display: block; }
+.inl { display: inline-block;}
+
+
+/**
  ************************************
  * 浮动设置
  ************************************
@@ -116,8 +124,8 @@
 .tc { text-align: center; }
 .tr { text-align: right; }
 .md { vertical-align: middle; }
-.tt { vertical-align: text-top; }
-.tb { vertical-align: text-bottom; }
+.vt { vertical-align: text-top; }
+.vb { vertical-align: text-bottom; }
 
 /* 不换行 */
 .nowrap {

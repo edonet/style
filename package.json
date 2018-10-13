@@ -1,6 +1,6 @@
 {
     "name": "@arted/style",
-    "version": "0.0.106",
+    "version": "0.0.108",
     "description": "Base style",
     "main": "index.js",
     "scripts": {

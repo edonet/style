@@ -13,13 +13,15 @@
  *************************************
  */
 
-/* 盒子样式 */
-.box,
-.fixed {
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+/* relative 布局 */
+.rel {
+    position: relative;
+}
+
+/* absolute 布局 */
+.abs {
+    display: block;
+    position: absolute;
 }
 
 /* fixed 布局 */
@@ -31,23 +33,21 @@
     overflow-y: auto;
 }
 
-/* absolute 布局 */
-.abs {
-    display: block;
-    position: absolute;
-}
-
-/* relative 布局 */
-.rel {
-    position: relative;
+/* 盒子样式 */
+.abs.box,
+.fixed.box {
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
 
 /* 居中位置 */
-.abs.auto {
+.abs.auto,
+.fixed.auto {
     left: 50%;
     top: 50%;
     margin-right: -50%;
-    margin-bottom: -50%;
     transform: translate(-50%, -50%);
 }
 

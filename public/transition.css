@@ -1,0 +1,80 @@
+/**
+ *****************************************
+ * Created by edonet@163.com
+ * Created on 2018-10-20 11:09:36
+ *****************************************
+ */
+@charset "utf-8";
+
+
+
+/**
+ *****************************************
+ * 渐入渐出
+ *****************************************
+ */
+.fade {
+    transition: opacity .35s ease-in-out;
+    opacity: 0;
+}
+.fade.actived {
+    opacity: 1;
+}
+
+
+/**
+ *****************************************
+ * 滑动
+ *****************************************
+ */
+.slide {
+    transition: transform .35s cubic-bezier(.21,.45,.39,1);
+}
+.slide.top {
+    transform: translate(0, -100%) translateZ(0);
+}
+.slide.bottom {
+    transform: translate(0, 100%) translateZ(0);
+}
+.slide.left {
+    transform: translate(-100%, 0) translateZ(0);
+}
+.slide.right {
+    transform: translate(100%, 0) translateZ(0);
+}
+.slide.actived {
+    transform: translate(0, 0) translateZ(0);
+}
+.slide.top.auto {
+    transform: translate(-50%, -100%) translateZ(0);
+}
+.slide.bottom.auto {
+    transform: translate(-50%, 100%) translateZ(0);
+}
+.slide.top.auto.actived,
+.slide.bottom.auto.actived {
+    transform: translate(-50%, 0) translateZ(0);
+}
+
+
+/**
+ *****************************************
+ * 缩放
+ *****************************************
+ */
+.scale {
+    transition: .35s cubic-bezier(.21,.45,.39,1);
+    transition-property: transform, opacity;
+    transform: translateZ(0) scale(0.8);
+    opacity: 0;
+}
+.scale.actived {
+    transform: translateZ(0) scale(1);
+    opacity: 1;
+}
+.scale.auto {
+    transform: translate(-50%, -50%) translateZ(0) scale(0.8);
+}
+.scale.auto.actived {
+    transform: translate(-50%, -50%) translateZ(0) scale(1);
+}

@@ -51,6 +51,21 @@
     transform: translate(-50%, -50%);
 }
 
+/* 顶部居中位置 */
+.fixed.auto.top,
+.abs.auto.top {
+    top: 0;
+    transform: translate(-50%, 0%);
+}
+
+/* 底部居中位置 */
+.fixed.auto.bottom,
+.abs.auto.bottom {
+    top: auto;
+    bottom: 0;
+    transform: translate(-50%, 0%);
+}
+
 
 /**
  ************************************

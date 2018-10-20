@@ -13,13 +13,9 @@
  *************************************
  */
 
-/* 盒子样式 */
-.box,
-.fixed {
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+/* relative 布局 */
+.rel {
+    position: relative;
 }
 
 /* fixed 布局 */
@@ -37,17 +33,21 @@
     position: absolute;
 }
 
-/* relative 布局 */
-.rel {
-    position: relative;
+/* 盒子样式 */
+.fixed.box,
+.abs.box {
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
 
 /* 居中位置 */
+.fixed.auto,
 .abs.auto {
     left: 50%;
     top: 50%;
     margin-right: -50%;
-    margin-bottom: -50%;
     transform: translate(-50%, -50%);
 }
 

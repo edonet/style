@@ -13,11 +13,6 @@
  *************************************
  */
 
-/* relative 布局 */
-.rel {
-    position: relative;
-}
-
 /* fixed 布局 */
 .fixed {
     display: flex;
@@ -64,6 +59,11 @@
     top: auto;
     bottom: 0;
     transform: translate(-50%, 0%);
+}
+
+/* relative 布局 */
+.rel {
+    position: relative;
 }
 
 
@@ -133,6 +133,10 @@
  * 文本设置
  ************************************
  */
+
+/* 字体样式 */
+.fbd { font-weight: bold; }
+.fit { font-style: italic; }
 
 /* 文本对齐样式 */
 .tl { text-align: left; }

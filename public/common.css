@@ -119,6 +119,10 @@
  ************************************
  */
 
+/* 字体样式 */
+.fbd { font-weight: bold; }
+.fit { font-style: italic; }
+
 /* 文本对齐样式 */
 .tl { text-align: left; }
 .tc { text-align: center; }

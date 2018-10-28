@@ -12,9 +12,9 @@
  * 加载依赖
  *****************************************
  */
-import './public/reset.css';
-import './public/common.css';
-import './public/transition.css';
+import './public/reset.css?global';
+import './public/common.css?global';
+import './public/transition.css?global';
 import settings from './settings.json';
 
 
